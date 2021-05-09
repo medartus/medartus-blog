@@ -6,24 +6,31 @@ import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/l
 import fs from 'fs'
 import hydrate from 'next-mdx-remote/hydrate'
 
-export async function getStaticPaths() {
-  const posts = getFiles('blog')
-  return {
-    paths: posts.map((p) => ({
-      params: {
-        slug: formatSlug(p).split('/'),
-      },
-    })),
+export async function getStaticPaths({ locales }) {
+  const foo = {
+    paths: [],
     fallback: false,
   }
+  locales.forEach(locale => {
+    const posts = getFiles('blog', locale)
+    posts.forEach(post => {
+      foo.paths.push({
+        params: {
+          slug: formatSlug(post).split('/'),
+        },
+        locale: locale,
+      })
+    });
+  });
+  return foo
 }
 
-export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
+export async function getStaticProps({ params, locale }) {
+  const allPosts = await getAllFilesFrontMatter('blog', locale)
   const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
-  const post = await getFileBySlug('blog', params.slug)
+  const post = await getFileBySlug('blog', locale, params.slug)
 
   // rss
   const rss = generateRss(allPosts)
