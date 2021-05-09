@@ -3,6 +3,8 @@ import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const MAX_DISPLAY = 5
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -10,10 +12,16 @@ const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 export async function getStaticProps({ locale }) {
   const posts = await getAllFilesFrontMatter('blog', locale)
 
-  return { props: { posts } }
+  return { 
+    props: { 
+      posts,
+      ...await serverSideTranslations(locale, ['index']),
+    }
+  }
 }
 
 export default function Home({ posts }) {
+  const { t } = useTranslation('index')
   return (
     <>
       <PageSeo
@@ -24,14 +32,14 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+            {t('latest')}
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
+          {!posts.length && t('noPosts')}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
@@ -39,7 +47,7 @@ export default function Home({ posts }) {
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
-                      <dt className="sr-only">Published on</dt>
+                      <dt className="sr-only">{'publishedOn'}</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>
                           {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
@@ -73,7 +81,7 @@ export default function Home({ posts }) {
                           className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
                           aria-label={`Read "${title}"`}
                         >
-                          Read more &rarr;
+                          {t('readMode')} &rarr;
                         </Link>
                       </div>
                     </div>
@@ -89,9 +97,9 @@ export default function Home({ posts }) {
           <Link
             href="/blog"
             className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-            aria-label="all posts"
+            aria-label={t('allPosts')}
           >
-            All Posts &rarr;
+            {t('allPosts')} &rarr;
           </Link>
         </div>
       )}

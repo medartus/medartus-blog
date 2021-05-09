@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import Link from '@/components/Link'
+import { useTranslation } from 'next-i18next'
 
-const Card = ({ title, description, imgSrc, href }) => (
+const Card = ({ title, description, imgSrc, href }) => {
+  const { t } = useTranslation('common')
+
+  return(
   <div className="p-4 md:w-1/2 md" style={{ maxWidth: '544px' }}>
     <div className="h-full border-2 border-gray-200 border-opacity-60 dark:border-gray-700 rounded-md overflow-hidden">
       {href ? (
-        <Link href={href} aria-label={`Link to ${title}`}>
+        <Link href={href} aria-label={`${t('linkTo')}${title}`}>
           <Image
             alt={title}
             src={imgSrc}
@@ -26,7 +30,7 @@ const Card = ({ title, description, imgSrc, href }) => (
       <div className="p-6">
         <h2 className="text-2xl font-bold leading-8 tracking-tight mb-3">
           {href ? (
-            <Link href={href} aria-label={`Link to ${title}`}>
+            <Link href={href} aria-label={`${t('linkTo')}${title}`}>
               {title}
             </Link>
           ) : (
@@ -38,7 +42,7 @@ const Card = ({ title, description, imgSrc, href }) => (
           <Link
             href={href}
             className="text-base font-medium leading-6 text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-            aria-label={`Link to ${title}`}
+            aria-label={`${t('linkTo')}${title}`}
           >
             Learn more &rarr;
           </Link>
@@ -46,6 +50,6 @@ const Card = ({ title, description, imgSrc, href }) => (
       </div>
     </div>
   </div>
-)
+)}
 
 export default Card

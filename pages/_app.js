@@ -8,8 +8,9 @@ import Head from 'next/head'
 import { SEO } from '@/components/SEO'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import MDXComponents from '@/components/MDXComponents'
+import { appWithTranslation } from 'next-i18next'
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider attribute="class">
       <MDXProvider components={MDXComponents}>
@@ -24,3 +25,5 @@ export default function App({ Component, pageProps }) {
     </ThemeProvider>
   )
 }
+
+export default appWithTranslation(App)

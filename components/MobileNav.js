@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
+import { useTranslation } from 'next-i18next'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
+  const { t } = useTranslation('common')
 
   const onToggleNav = () => {
     setNavShow((status) => {
@@ -22,7 +24,7 @@ const MobileNav = () => {
       <button
         type="button"
         className="w-8 h-8 ml-1 mr-1 rounded"
-        aria-label="Toggle Menu"
+        aria-label={t('toggleMenu')}
         onClick={onToggleNav}
       >
         <svg
@@ -53,7 +55,7 @@ const MobileNav = () => {
       >
         <button
           type="button"
-          aria-label="toggle modal"
+          aria-label={t('toggleModal')}
           className="fixed w-full h-full cursor-auto focus:outline-none"
           onClick={onToggleNav}
         ></button>
