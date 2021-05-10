@@ -1,20 +1,21 @@
-import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
-import projectsData from '@/data/projectsData'
+import { readFile } from '@/lib/projects'
 import Card from '@/components/Card'
 import { PageSeo } from '@/components/SEO'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export async function getStaticProps({ locale }) {
+  const projects = await readFile(locale,'projects.json')
   return { 
     props: {
+      projects,
       ...await serverSideTranslations(locale, ['projects']),
     }
   }
 }
 
-export default function Projects() {
+export default function Projects({projects}) {
   const { t } = useTranslation('projects')
   return (
     <>
@@ -34,7 +35,7 @@ export default function Projects() {
         </div>
         <div className="container py-12">
           <div className="flex flex-wrap -m-4">
-            {projectsData.map((d) => (
+            {projects.map((d) => (
               <Card
                 key={d.title}
                 title={d.title}
