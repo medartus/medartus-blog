@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle'
 import PostLayout from '@/layouts/PostLayout'
 import generateRss from '@/lib/generate-rss'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export async function getStaticPaths({ locales }) {
   const foo = {
@@ -36,7 +37,14 @@ export async function getStaticProps({ params, locale }) {
   const rss = generateRss(allPosts)
   fs.writeFileSync('./public/index.xml', rss)
 
-  return { props: { post, prev, next } }
+  return { 
+    props: { 
+      ...await serverSideTranslations(locale, ['common']),  
+      post, 
+      prev, 
+      next 
+    } 
+  }
 }
 
 export default function Blog({ post, prev, next }) {

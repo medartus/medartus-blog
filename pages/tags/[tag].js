@@ -7,6 +7,7 @@ import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const root = process.cwd()
 
@@ -42,7 +43,13 @@ export async function getStaticProps({ params, locale }) {
   fs.mkdirSync(rssPath, { recursive: true })
   fs.writeFileSync(path.join(rssPath, 'index.xml'), rss)
 
-  return { props: { posts: filteredPosts, tag: params.tag } }
+  return { 
+    props: { 
+      ...await serverSideTranslations(locale, ['common']),  
+      posts: filteredPosts, 
+      tag: params.tag 
+    } 
+  }
 }
 
 export default function Tag({ posts, tag }) {
