@@ -2,12 +2,18 @@ import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
+import {default as NLink} from 'next/link'
+import { useRouter } from 'next/router'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import { useTranslation } from 'next-i18next'
+
 
 const LayoutWrapper = ({ children }) => {
+  const router = useRouter();
+  const { t } = useTranslation('nav');
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
@@ -36,11 +42,23 @@ const LayoutWrapper = ({ children }) => {
                   href={link.href}
                   className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
                 >
-                  {link.title}
+                  {t(link.title)}
                 </Link>
               ))}
             </div>
             <ThemeSwitch />
+              <NLink 
+                href={router.asPath}
+                locale={router.locale === 'en' ? 'fr' : 'en'}
+              >
+                <button
+                  aria-label={t('switchLanguage')}
+                  type="button"
+                  className="w-8 h-8 p-1 ml-1 mr-1 rounded sm:ml-4"
+                >
+                  {t('otherLanguageFlag')}
+                </button>
+              </NLink>
             <MobileNav />
           </div>
         </header>

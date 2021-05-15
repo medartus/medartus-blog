@@ -1,6 +1,7 @@
 import fs from 'fs'
 import { MDXRemote } from 'next-mdx-remote'
 import MDXComponents from '@/components/MDXComponents'
+import PageContainer from '@/components/ContentContainer'
 import PageTitle from '@/components/PageTitle'
 import PostLayout from '@/layouts/PostLayout'
 import generateRss from '@/lib/generate-rss'
@@ -39,7 +40,7 @@ export async function getStaticProps({ params, locale }) {
 
   return { 
     props: { 
-      ...await serverSideTranslations(locale, ['common']),  
+      ...await serverSideTranslations(locale, ['common','nav']),  
       post, 
       prev, 
       next 
@@ -51,7 +52,7 @@ export default function Blog({ post, prev, next }) {
   const { mdxSource, frontMatter } = post
 
   return (
-    <>
+    <PageContainer>
       {frontMatter.draft !== true ? (
         <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
           <MDXRemote {...mdxSource} components={MDXComponents} />
@@ -66,6 +67,6 @@ export default function Blog({ post, prev, next }) {
           </PageTitle>
         </div>
       )}
-    </>
+    </PageContainer>
   )
 }

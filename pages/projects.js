@@ -4,13 +4,14 @@ import Card from '@/components/Card'
 import { PageSeo } from '@/components/SEO'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import PageContainer from '@/components/ContentContainer'
 
 export async function getStaticProps({ locale }) {
   const projects = await readFile(locale,'projects.json')
   return { 
     props: {
       projects,
-      ...await serverSideTranslations(locale, ['projects']),
+      ...await serverSideTranslations(locale, ['common','nav','projects']),
     }
   }
 }
@@ -18,7 +19,7 @@ export async function getStaticProps({ locale }) {
 export default function Projects({projects}) {
   const { t } = useTranslation('projects')
   return (
-    <>
+    <PageContainer>
       <PageSeo
         title={`${t('projects')} - ${siteMetadata.author}`}
         description={siteMetadata.description}
@@ -47,6 +48,6 @@ export default function Projects({projects}) {
           </div>
         </div>
       </div>
-    </>
+    </PageContainer>
   )
 }

@@ -5,6 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import PageContainer from '@/components/ContentContainer'
 
 const MAX_DISPLAY = 5
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -15,7 +16,7 @@ export async function getStaticProps({ locale }) {
   return { 
     props: { 
       posts,
-      ...await serverSideTranslations(locale, ['index']),
+      ...await serverSideTranslations(locale, ['common','nav','index']),
     }
   }
 }
@@ -23,7 +24,7 @@ export async function getStaticProps({ locale }) {
 export default function Home({ posts }) {
   const { t } = useTranslation('index')
   return (
-    <>
+    <PageContainer>
       <PageSeo
         title={siteMetadata.title}
         description={siteMetadata.description}
@@ -103,6 +104,6 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-    </>
+    </PageContainer>
   )
 }

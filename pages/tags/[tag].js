@@ -1,4 +1,5 @@
 import { PageSeo } from '@/components/SEO'
+import PageContainer from '@/components/ContentContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import generateRss from '@/lib/generate-rss'
@@ -45,7 +46,7 @@ export async function getStaticProps({ params, locale }) {
 
   return { 
     props: { 
-      ...await serverSideTranslations(locale, ['common']),  
+      ...await serverSideTranslations(locale, ['common','nav']),  
       posts: filteredPosts, 
       tag: params.tag 
     } 
@@ -56,13 +57,13 @@ export default function Tag({ posts, tag }) {
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   return (
-    <>
+    <PageContainer>
       <PageSeo
         title={`${tag} - ${siteMetadata.title}`}
         description={`${tag} tags - ${siteMetadata.title}`}
         url={`${siteMetadata.siteUrl}/tags/${tag}`}
       />
       <ListLayout posts={posts} title={title} />
-    </>
+    </PageContainer>
   )
 }

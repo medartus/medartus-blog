@@ -6,6 +6,7 @@ import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import PageContainer from '@/components/ContentContainer'
 
 export async function getStaticProps({ locale }) {
   const tags = await getAllTags('blog', locale)
@@ -13,7 +14,7 @@ export async function getStaticProps({ locale }) {
   return { 
     props: { 
       tags,
-      ...await serverSideTranslations(locale, ['tags']),
+      ...await serverSideTranslations(locale, ['common','nav','tags']),
     }
   }
 }
@@ -22,7 +23,7 @@ export default function Tags({ tags }) {
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
   const { t } = useTranslation('tags')
   return (
-    <>
+    <PageContainer>
       <PageSeo
         title={`${t('tags')} - ${siteMetadata.author}`}
         description={t('descrpition')}
@@ -51,6 +52,6 @@ export default function Tags({ tags }) {
           })}
         </div>
       </div>
-    </>
+    </PageContainer>
   )
 }

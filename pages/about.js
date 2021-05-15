@@ -2,18 +2,19 @@ import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { PageSeo } from '@/components/SEO'
 import { useTranslation } from 'next-i18next'
+import PageContainer from '@/components/ContentContainer'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['about']),  
+    ...await serverSideTranslations(locale, ['common','nav','about']),  
   },  
 })
 
 export default function About() {
   const { t } = useTranslation('about')
   return (
-    <>
+    <PageContainer>
       <PageSeo
         title={`${t('about')} - ${siteMetadata.author}`}
         description={`${t('aboutMe')}  - ${siteMetadata.author}`}
@@ -55,6 +56,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </>
+    </PageContainer>
   )
 }
