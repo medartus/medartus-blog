@@ -1,7 +1,7 @@
 {
-    "latest": "foo",
-    "noPosts": "Aucun post trouvé.",
+    "latest": "Derniers articles",
+    "noPosts": "Aucun article trouvé.",
     "publishedOn": "Publié le",
     "readMore": "Lire plus",
-    "allPosts": "Tous les Posts"
+    "allPosts": "Tous les Articles"
 }
