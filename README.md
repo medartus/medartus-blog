@@ -1,1 +1,1 @@
-"# medartus-blog" 
+medartus-blog

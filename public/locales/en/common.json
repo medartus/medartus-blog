@@ -1,0 +1,16 @@
+{
+    "linkTo": "Link to ",
+    "toggleMenu": "Toggle Menu",
+    "toggleModal": "toggle modal",
+    "toggleDarkMode": "Toggle Dark Mode",
+    "searchArticles": "Search articles",
+    "publishedOn": "Published on",
+    "authors": "Authors",
+    "name": "Name",
+    "disscussTwitter": "Discuss on Twitter",
+    "viewGithub": "View on GitHub",
+    "tags": "Tags",
+    "previousArticle": "Previous Article",
+    "nextArticle": "Next Article",
+    "backBlog": "Back to the blog"
+}
