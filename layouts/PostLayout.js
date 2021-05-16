@@ -14,7 +14,7 @@ const discussUrl = (slug) =>
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
-export default function PostLayout({ children, frontMatter, next, prev }) {
+export default function PostLayout({ children, locale, frontMatter, next, prev }) {
   const { t } = useTranslation('common')
   const { slug, fileName, date, title, tags } = frontMatter
 
@@ -30,7 +30,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   <dt className="sr-only">{t('publishedOn')}</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                      {new Date(date).toLocaleDateString(locale=='en'?"en-US":"fr-FR", postDateTemplate)}
                     </time>
                   </dd>
                 </div>

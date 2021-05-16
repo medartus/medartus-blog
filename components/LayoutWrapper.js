@@ -1,4 +1,3 @@
-import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
@@ -10,10 +9,10 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { useTranslation } from 'next-i18next'
 
-
 const LayoutWrapper = ({ children }) => {
   const router = useRouter();
   const { t } = useTranslation('nav');
+  const siteMeta = useTranslation('siteMetadata');
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
@@ -24,12 +23,12 @@ const LayoutWrapper = ({ children }) => {
                 <div className="mr-3">
                   <Logo />
                 </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
+                {typeof siteMeta.t('headerTitle') === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
+                    {siteMeta.t('headerTitle')}
                   </div>
                 ) : (
-                  siteMetadata.headerTitle
+                  siteMeta.t('headerTitle')
                 )}
               </div>
             </Link>

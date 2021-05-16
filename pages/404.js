@@ -1,11 +1,11 @@
 import Link from '@/components/Link'
 import { useTranslation } from 'next-i18next'
-import PageContainer from '@/components/ContentContainer'
+import PageContainer from '@/components/PageContainer'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common','nav','404']),  
+    ...await serverSideTranslations(locale, ['common','nav','siteMetadata','404']),  
   },  
 })
 

@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import PageContainer from '@/components/ContentContainer'
+import PageContainer from '@/components/PageContainer'
 
 const MAX_DISPLAY = 5
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -16,18 +16,20 @@ export async function getStaticProps({ locale }) {
   return { 
     props: { 
       posts,
-      ...await serverSideTranslations(locale, ['common','nav','index']),
+      ...await serverSideTranslations(locale, ['common','nav','siteMetadata','index']),
+      locale
     }
   }
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, locale }) {
   const { t } = useTranslation('index')
+  const siteMeta = useTranslation('siteMetadata')
   return (
     <PageContainer>
       <PageSeo
-        title={siteMetadata.title}
-        description={siteMetadata.description}
+        title={siteMeta.t('title')}
+        description={siteMeta.t('description')}
         url={siteMetadata.siteUrl}
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -36,7 +38,7 @@ export default function Home({ posts }) {
             {t('latest')}
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            {siteMeta.t('description')}
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -51,7 +53,7 @@ export default function Home({ posts }) {
                       <dt className="sr-only">{'publishedOn'}</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>
-                          {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                          {new Date(date).toLocaleDateString(locale=='en'?"en-US":"fr-FR", postDateTemplate)}
                         </time>
                       </dd>
                     </dl>

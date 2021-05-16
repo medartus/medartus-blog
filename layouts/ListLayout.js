@@ -1,12 +1,11 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import { useTranslation } from 'next-i18next'
 
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
-export default function ListLayout({ posts, title }) {
+export default function ListLayout({ posts, title, locale }) {
   const [searchValue, setSearchValue] = useState('')
   const { t } = useTranslation('common')
   const filteredBlogPosts = posts.filter((frontMatter) => {
@@ -56,7 +55,7 @@ export default function ListLayout({ posts, title }) {
                     <dt className="sr-only">{t('publishedOn')}</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>
-                        {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                        {new Date(date).toLocaleDateString(locale=='en'?"en-US":"fr-FR", postDateTemplate)}
                       </time>
                     </dd>
                   </dl>

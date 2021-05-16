@@ -1,28 +1,30 @@
+import { readLocaleFile } from '@/lib/utils/files'
 import siteMetadata from '@/data/siteMetadata'
-import { readFile } from '@/lib/projects'
 import Card from '@/components/Card'
 import { PageSeo } from '@/components/SEO'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import PageContainer from '@/components/ContentContainer'
+import PageContainer from '@/components/PageContainer'
 
 export async function getStaticProps({ locale }) {
-  const projects = await readFile(locale,'projects.json')
+  const { projects } = await readLocaleFile(locale,'projects.json')
+
   return { 
     props: {
-      projects,
-      ...await serverSideTranslations(locale, ['common','nav','projects']),
+      projects: projects,
+      ...await serverSideTranslations(locale, ['common','nav','siteMetadata','projects'])
     }
   }
 }
 
 export default function Projects({projects}) {
   const { t } = useTranslation('projects')
+  const siteMeta = useTranslation('siteMetadata')
   return (
     <PageContainer>
       <PageSeo
-        title={`${t('projects')} - ${siteMetadata.author}`}
-        description={siteMetadata.description}
+        title={`${siteMeta.t('projects')} - ${siteMetadata.author}`}
+        description={siteMeta.t('description')}
         url={`${siteMetadata.siteUrl}/projects`}
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">

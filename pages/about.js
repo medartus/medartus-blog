@@ -2,22 +2,23 @@ import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { PageSeo } from '@/components/SEO'
 import { useTranslation } from 'next-i18next'
-import PageContainer from '@/components/ContentContainer'
+import PageContainer from '@/components/PageContainer'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common','nav','about']),  
+    ...await serverSideTranslations(locale, ['common','nav','siteMetadata','about']),  
   },  
 })
 
 export default function About() {
   const { t } = useTranslation('about')
+  const siteMeta = useTranslation('siteMetadata')
   return (
     <PageContainer>
       <PageSeo
-        title={`${t('about')} - ${siteMetadata.author}`}
-        description={`${t('aboutMe')}  - ${siteMetadata.author}`}
+        title={`${siteMeta.t('about')} - ${siteMetadata.author}`}
+        description={`${siteMeta.t('aboutMe')}  - ${siteMetadata.author}`}
         url={`${siteMetadata.siteUrl}/about`}
       />
       <div className="divide-y">
@@ -39,7 +40,7 @@ export default function About() {
               <SocialIcon kind="github" href={siteMetadata.github} />
               <SocialIcon kind="facebook" href={siteMetadata.facebook} />
               <SocialIcon kind="youtube" href={siteMetadata.youtube} />
-              <SocialIcon kind="linkedin" href={siteMetadata.linkedin} />
+              <SocialIcon kind="linkedin" href={siteMeta.t('linkedin')} />
               <SocialIcon kind="twitter" href={siteMetadata.twitter} />
             </div>
           </div>

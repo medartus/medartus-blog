@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { MDXRemote } from 'next-mdx-remote'
 import MDXComponents from '@/components/MDXComponents'
-import PageContainer from '@/components/ContentContainer'
+import PageContainer from '@/components/PageContainer'
 import PageTitle from '@/components/PageTitle'
 import PostLayout from '@/layouts/PostLayout'
 import generateRss from '@/lib/generate-rss'
@@ -35,12 +35,12 @@ export async function getStaticProps({ params, locale }) {
   const post = await getFileBySlug('blog', locale, params.slug)
 
   // rss
-  const rss = generateRss(allPosts)
-  fs.writeFileSync('./public/index.xml', rss)
+  const rss = generateRss(allPosts,locale)
+  if(locale=='en') fs.writeFileSync('./public/index.xml', rss)
 
   return { 
     props: { 
-      ...await serverSideTranslations(locale, ['common','nav']),  
+      ...await serverSideTranslations(locale, ['common','nav','siteMetadata']),  
       post, 
       prev, 
       next 
