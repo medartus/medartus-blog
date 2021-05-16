@@ -1,16 +1,40 @@
 {
  "projects": [
   {
-    "title": "A Search Engine",
-    "description": "What is you could look up any information in the world? Webpages, images, videos and more. Google has many features to help you find exactly what you're looking for.",
-    "imgSrc": "/static/images/google.png",
-    "href": "https://www.google.com"
+    "title": "📅 Feed My Flow",
+    "description": "Feed My Flow est une application web open source qui permet de programmer facilement les posts LinkedIn. Nous utilisons le framework React pour la partie fron-end et firebase pour toute la partie back-end.",
+    "imgSrc": "/static/images/project/feedmyflow.jpg",
+    "href": "https://github.com/medartus/feedmyflow"
   },
   {
-    "title": "The Time Machine",
-    "description": "Imagine being able to travel back in time or to the future. Simple turn the knob to the desired date and press \"Go\". No more worrying about lost keys or forgotten handphones with this simple yet affordable solution.",
-    "imgSrc": "/static/images/time-machine.jpg",
-    "href": "/blog/the-time-machine"
+    "title": "🧙‍♀️ Loa",
+    "description": "Un petit agent conversationnel basé sur l'IA capable de fournir des informations sur les restaurants situés aux États-Unis, et intégré à un algorithme de recommandation.",
+    "imgSrc": "/static/images/project/loa.jpg",
+    "href": "https://github.com/medartus/Loa"
+  },
+  {
+    "title": "🚴🏻 BikeStations",
+    "description": "Un outil pour visualiser toutes les disponibilités en temps réel des stations de vélo en France. Le site intègre des données sur la météo et la qualité de l'air, et permet la planification des trajets.",
+    "imgSrc": "/static/images/project/bikestations.jpg",
+    "href": "https://github.com/alexZajac/BikeStations"
+  },
+  {
+    "title": "📱 Artify",
+    "description": "Application mobile aidant les enfants dyspraxiques ayant des problèmes de lecture ou d'écriture.",
+    "imgSrc": "/static/images/project/artify.jpg",
+    "href": "https://github.com/medartus/ArtifyApp"
+  },
+  {
+    "title": "🛏 Airbnb - Paris",
+    "description": "Modèle de prédiction pour contrôler les flux de location d'appartements sur la plateforme Airbnb pour la mairie de Paris.",
+    "imgSrc": "/static/images/project/airbnb-paris.jpg",
+    "href": "https://github.com/medartus/Airbnb-Paris"
+  },
+  {
+    "title": "📖 Financial Processing",
+    "description": "Cours pour les étudiants de l'ESILV sur la finance associé au traitement du signal.",
+    "imgSrc": "/static/images/project/financial-processing.jpg",
+    "href": "https://github.com/medartus/Financial-Processing"
   }
  ]
 }

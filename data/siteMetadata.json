@@ -1,14 +1,12 @@
 {
-  "author": "Tails Azimuth",
-  "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
-  "siteRepo": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
-  "image": "/static/images/avatar.png",
+  "title": "Marc-Etienne Dartus Blog",
+  "description": "Sharing knowledge about Artificial Intelligence and Software Development",
+  "author": "Marc-Etienne Dartus",
+  "siteUrl": "https://me.dartus.fr",
+  "siteRepo": "https://github.com/medartus/medartus-blog",
+  "image": "/static/images/avatar.jpg",
   "socialBanner": "/static/images/twitter-card.png",
-  "email": "address@yoursite.com",
-  "github": "https://github.com",
-  "twitter": "https://twitter.com/Twitter",
-  "facebook": "https://facebook.com",
-  "youtube": "https://youtube.com",
-  "title": "Next.js Starter Blog",
-  "description": "A blog created with Next.js and Tailwind.css"
+  "email": "marcetienne@dartus.fr",
+  "github": "https://github.com/medartus",
+  "twitter": "https://twitter.com/medartus"
 }

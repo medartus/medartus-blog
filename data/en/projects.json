@@ -1,16 +1,40 @@
 {
  "projects": [
   {
-    "title": "A Search Engine",
-    "description": "What is you could look up any information in the world? Webpages, images, videos and more. Google has many features to help you find exactly what you're looking for.",
-    "imgSrc": "/static/images/google.png",
-    "href": "https://www.google.com"
+    "title": "📅 Feed My Flow",
+    "description": "Feed My Flow is open source web application that provides easy scheduling LinkedIn posts. We use the React framework for the front end part and firebase for all the back end part.",
+    "imgSrc": "/static/images/project/feedmyflow.jpg",
+    "href": "https://github.com/medartus/feedmyflow"
   },
   {
-    "title": "The Time Machine",
-    "description": "Imagine being able to travel back in time or to the future. Simple turn the knob to the desired date and press \"Go\". No more worrying about lost keys or forgotten handphones with this simple yet affordable solution.",
-    "imgSrc": "/static/images/time-machine.jpg",
-    "href": "/blog/the-time-machine"
+    "title": "🧙‍♀️ Loa",
+    "description": "A small AI-based conversational agent capable of providing accurate informations about U.S located restaurants, and integrated with a content-based recommendation engine.",
+    "imgSrc": "/static/images/project/loa.jpg",
+    "href": "https://github.com/medartus/Loa"
+  },
+  {
+    "title": "🚴🏻 BikeStations",
+    "description": "A tool to visualize all the realtime availabilities of the bike stations of France, with weather and air quality data, and trip-planning.",
+    "imgSrc": "/static/images/project/bikestations.jpg",
+    "href": "https://github.com/alexZajac/BikeStations"
+  },
+  {
+    "title": "📱 Artify",
+    "description": "Mobile application helping dyspraxic children having reading or writing problems.",
+    "imgSrc": "/static/images/project/artify.jpg",
+    "href": "https://github.com/medartus/ArtifyApp"
+  },
+  {
+    "title": "🛏 Airbnb - Paris",
+    "description": "Prediction model to control apartment rental flows on the Airbnb platform for Paris City Hall.",
+    "imgSrc": "/static/images/project/airbnb-paris.jpg",
+    "href": "https://github.com/medartus/Airbnb-Paris"
+  },
+  {
+    "title": "📖 Financial Processing",
+    "description": "Courses for ESILV's students on finance with signal processing.",
+    "imgSrc": "/static/images/project/financial-processing.jpg",
+    "href": "https://github.com/medartus/Financial-Processing"
   }
  ]
 }

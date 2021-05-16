@@ -1,9 +1,9 @@
 {
     "about": "About",
     "aboutMe": "About Me",
-    "jobTitle":"",
-    "companyName":"",
-    "intro1":"",
-    "intro2":"",
-    "intro3":""
+    "jobTitle" : "Software Engineer Intern | Freelance",
+    "companyName" : "Amazon",
+    "intro1" : "Je suis stagiaire SDE chez Amazon Madrid au sein de l'équipe kindle.\nJe suis également développeur Freelance en développement logiciel et analyse de données / visualisation.",
+    "intro2" : "En 5ème année d'école d'ingénieur à l'ESILV France et en double cursus avec une école de commerce (EMLV).\nJ'apprends beaucoup par moi-même et j'aime tester de nouveaux langages de programmation pour voir leur potentiel.",
+    "intro3" : "Contactez-moi sur Linkedin ou envoyez-moi un email à marcetienne@dartus.fr."
 }
