@@ -1,16 +1,16 @@
 {
-    "linkTo": "Link to ",
+    "linkTo": "Lien vers ",
     "toggleMenu": "Toggle Menu",
     "toggleModal": "toggle modal",
     "toggleDarkMode": "Toggle Dark Mode",
-    "searchArticles": "Search articles",
-    "publishedOn": "Published on",
-    "authors": "Authors",
-    "name": "Name",
-    "disscussTwitter": "Discuss on Twitter",
-    "viewGithub": "View on GitHub",
+    "searchArticles": "Rechercher des articles",
+    "publishedOn": "Publié le",
+    "authors": "Autheur",
+    "name": "Nom",
+    "disscussTwitter": "Discuter sur Twitter",
+    "viewGithub": "Voir sur GitHub",
     "tags": "Tags",
-    "previousArticle": "Previous Article",
-    "nextArticle": "Next Article",
-    "backBlog": "Back to the blog"
+    "previousArticle": "Article précédent",
+    "nextArticle": "Article suivant",
+    "backBlog": "Retour au blog"
 }

@@ -1,8 +1,8 @@
 {
     "blog": "Blog",
     "tags": "Tags",
-    "projects": "Projects",
-    "about": "About",
+    "projects": "Projets",
+    "about": "À propos",
     "switchLanguage": "Changement de langage",
     "otherLanguageFlag": "🇬🇧"
 }
