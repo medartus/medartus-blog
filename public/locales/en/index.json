@@ -1,7 +1,9 @@
 {
-    "latest": "Latest",
-    "noPosts": "No posts found.",
-    "publishedOn": "Published on",
-    "readMore": "Read more",
-    "allPosts": "All Posts"
+  "latest": "Latest",
+  "noPosts": "No posts found.",
+  "publishedOn": "Published on",
+  "readMore": "Read more",
+  "allPosts": "All Posts",
+  "previous": "Previous",
+  "next": "Next"
 }

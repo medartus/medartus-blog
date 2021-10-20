@@ -1,0 +1,10 @@
+{
+  "title": "S'abonner à la newsletter",
+  "invalid": "Votre adresse e-mail n'est pas valide ou vous êtes déjà inscrit !",
+  "success": "Bravo ! 🎉 Vous êtes maintenant abonné.",
+  "email": "Adresse e-mail",
+  "enterEmail": "Entrez votre email",
+  "justSubscribed": "Vous êtes inscrit !  🎉",
+  "thanks": "Merci beaucoup !",
+  "signUp": "S'inscrire"
+}

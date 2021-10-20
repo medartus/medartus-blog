@@ -1,32 +1,41 @@
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
-import { PageSeo } from '@/components/SEO'
+import { PageSEO } from '@/components/SEO'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import PageContainer from '@/components/PageContainer'
+
+export const POSTS_PER_PAGE = 5
 
 export async function getStaticProps({ locale }) {
   const posts = await getAllFilesFrontMatter('blog', locale)
+  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
+  const pagination = {
+    currentPage: 1,
+    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
+  }
 
-  return { 
-    props: { 
+  return {
+    props: {
+      initialDisplayPosts,
       posts,
-      ...await serverSideTranslations(locale, ['common','nav','siteMetadata','blog']),
+      pagination,
+      ...(await serverSideTranslations(locale, ['common', 'nav', 'siteMetadata', 'blog'])),
     },
   }
 }
 
-export default function Blog({ posts }) {
+export default function Blog({ posts, initialDisplayPosts, pagination }) {
   const { t } = useTranslation('blog')
   return (
-    <PageContainer>
-      <PageSeo
-        title={`${t('blog')} - ${siteMetadata.author}`}
-        description={t('description')}
-        url={`${siteMetadata.siteUrl}/blog`}
+    <>
+      <PageSEO title={`${t('blog')} - ${siteMetadata.author}`} description={t('description')} />
+      <ListLayout
+        posts={posts}
+        initialDisplayPosts={initialDisplayPosts}
+        pagination={pagination}
+        title={t('allPosts')}
       />
-      <ListLayout posts={posts} title={t('allPosts')} />
-    </PageContainer>
+    </>
   )
 }

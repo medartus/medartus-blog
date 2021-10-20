@@ -1,7 +1,6 @@
-import { PageSeo } from '@/components/SEO'
-import PageContainer from '@/components/PageContainer'
-import ListLayout from '@/layouts/ListLayout'
+import { TagSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import ListLayout from '@/layouts/ListLayout'
 import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
@@ -13,21 +12,21 @@ import { useTranslation } from 'next-i18next'
 
 const root = process.cwd()
 
-export async function getStaticPaths({locales}) {
+export async function getStaticPaths({ locales }) {
   const foo = {
     paths: [],
     fallback: false,
   }
   for (const locale of locales) {
-   const tags = await getAllTags('blog', locale)
+    const tags = await getAllTags('blog', locale)
     Object.keys(tags).map((tag) => {
       foo.paths.push({
-      params: {
-        tag,
-      },
-      locale: locale,
+        params: {
+          tag,
+        },
+        locale: locale,
+      })
     })
-    }); 
   }
 
   return foo
@@ -40,17 +39,17 @@ export async function getStaticProps({ params, locale }) {
   )
 
   // rss
-  const rss = generateRss(filteredPosts, locale, `tags/${params.tag}/index.xml`)
+  const rss = generateRss(filteredPosts, locale, `tags/${params.tag}/feed.xml`)
   const rssPath = path.join(root, 'public', 'tags', params.tag)
   fs.mkdirSync(rssPath, { recursive: true })
-  fs.writeFileSync(path.join(rssPath, 'index.xml'), rss)
+  fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
 
-  return { 
-    props: { 
-      ...await serverSideTranslations(locale, ['common','nav','siteMetadata']),  
-      posts: filteredPosts, 
-      tag: params.tag 
-    } 
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'nav', 'siteMetadata'])),
+      posts: filteredPosts,
+      tag: params.tag,
+    },
   }
 }
 
@@ -59,13 +58,12 @@ export default function Tag({ posts, tag }) {
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   const { t } = useTranslation('siteMetadata')
   return (
-    <PageContainer>
-      <PageSeo
-        title={`${tag} - ${t('title')}`}
-        description={`${tag} tags - ${t('title')}`}
-        url={`${siteMetadata.siteUrl}/tags/${tag}`}
+    <>
+      <TagSEO
+        title={`${tag} - ${siteMetadata.author}`}
+        description={`${tag} tags - ${siteMetadata.author}`}
       />
       <ListLayout posts={posts} title={title} />
-    </PageContainer>
+    </>
   )
 }

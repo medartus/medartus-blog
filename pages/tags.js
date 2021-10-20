@@ -1,21 +1,20 @@
 import Link from '@/components/Link'
-import { PageSeo } from '@/components/SEO'
+import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import PageContainer from '@/components/PageContainer'
 
 export async function getStaticProps({ locale }) {
   const tags = await getAllTags('blog', locale)
 
-  return { 
-    props: { 
+  return {
+    props: {
       tags,
-      ...await serverSideTranslations(locale, ['common','nav','siteMetadata','tags']),
-    }
+      ...(await serverSideTranslations(locale, ['common', 'nav', 'siteMetadata', 'tags'])),
+    },
   }
 }
 
@@ -24,11 +23,10 @@ export default function Tags({ tags }) {
   const { t } = useTranslation('tags')
   const siteMeta = useTranslation('siteMetadata')
   return (
-    <PageContainer>
-      <PageSeo
-        title={`${siteMeta.t('tags')} - ${siteMetadata.author}`}
+    <>
+      <PageSEO
+        title={`${siteMeta.t('tags')} - ${siteMeta.author}`}
         description={siteMeta.t('descrpition')}
-        url={`${siteMetadata.siteUrl}/tags`}
       />
       <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">
         <div className="pt-6 pb-8 space-x-2 md:space-y-5">
@@ -53,6 +51,6 @@ export default function Tags({ tags }) {
           })}
         </div>
       </div>
-    </PageContainer>
+    </>
   )
 }
