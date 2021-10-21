@@ -1,16 +1,15 @@
 ---
-name: Tails Azimuth
-avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+name: Marc-Etienne Dartus
+avatar: /static/images/avatar.jpg
+occupation: Software Engineer
+company: Amazon
+email: marcetienne@dartus.fr
+linkedin: https://www.linkedin.com/in/marcetiennedartus/?locale=en_US
+github: https://github.com/medartus
 ---
 
-EN Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+I'm Marc-Etienne, an Software Engineer at Amazon Madrid working for the kindle team. I'm also a Freelance developer in software engineering and Data Analysis / Visualization.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+I have a Master in engineering from ESILV France and a Master of business from EMLV France. I learn a lot by myself and I like to test new programming languages ​​to see their potential.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Contact me on <a href="https://www.linkedin.com/in/marcetiennedartus/?locale=en_US">Linkedin</a> or Send an Email at <a href="mailto:marcetienne@dartus.fr">marcetienne@dartus.fr</a>.
