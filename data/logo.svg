@@ -1,3 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="344.5639097744361 330.27819548872174 111.73684210526318 91.21804511278197" width="53.87" height="43.61"><defs><path d="M453.3 331.28L453.3 359.85L388.64 418.5L388.64 388.42L453.3 331.28Z" id="aFZf6T5ED"></path><linearGradient id="gradientb2ThqnP5Op" gradientUnits="userSpaceOnUse" x1="420.97" y1="331.28" x2="420.97" y2="418.5"><stop style="stop-color: #06b6d4;stop-opacity: 1" offset="0%"></stop><stop style="stop-color: #67e8f9;stop-opacity: 1" offset="100%"></stop></linearGradient><path d="M410.23 331.28L410.23 359.85L345.56 418.5L345.56 388.42L410.23 331.28Z" id="a9fehgwfM"></path><linearGradient id="gradientk1wNV9Ostb" gradientUnits="userSpaceOnUse" x1="377.89" y1="331.28" x2="377.89" y2="418.5"><stop style="stop-color: #06b6d4;stop-opacity: 1" offset="0%"></stop><stop style="stop-color: #67e8f9;stop-opacity: 1" offset="100%"></stop></linearGradient></defs><g><g><use xlink:href="#aFZf6T5ED" opacity="1" fill="url(#gradientb2ThqnP5Op)"></use></g><g><use xlink:href="#a9fehgwfM" opacity="1" fill="url(#gradientk1wNV9Ostb)"></use></g></g></svg>
+<svg width="54" height="44" viewBox="0 0 54 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43.9387 1.42649C46.3569 2.04509 49 3.67595 49 7.12044V36.1525C49 39.1331 45.6258 41.6122 43.9387 42.4791C43.1655 42.5963 41.155 42.7603 39.2992 42.4791C37.4434 42.198 35.5267 40.9561 34.8003 40.3703C32.5977 38.3083 26.7866 32.7783 21.1629 27.1547C17.4513 21.6998 19.6164 17.3367 21.1629 15.8371C25.0995 12.4629 33.3381 5.30681 34.8003 3.67595C36.2624 2.04509 38.4088 1.49679 39.2992 1.42649C39.8381 1.16874 41.5205 0.807888 43.9387 1.42649Z" fill="url(#paint0_linear_101:13)"/>
+<path d="M9.06129 42.2079C6.64312 41.5893 4 39.9585 4 36.514V7.48186C4 4.50133 7.37419 2.02224 9.06129 1.15526C9.83454 1.0381 11.845 0.874073 13.7008 1.15526C15.5566 1.43644 17.4733 2.67833 18.1997 3.26412C20.4023 5.32613 26.2134 10.8561 31.8371 16.4797C35.5487 21.9346 33.3836 26.2977 31.8371 27.7973C27.9005 31.1715 19.6619 38.3276 18.1997 39.9585C16.7376 41.5893 14.5912 42.1376 13.7008 42.2079C13.1619 42.4657 11.4795 42.8265 9.06129 42.2079Z" fill="#3DD2E9"/>
+<defs>
+<linearGradient id="paint0_linear_101:13" x1="48.9892" y1="21.8924" x2="23.261" y2="21.8924" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3DD2E9"/>
+<stop offset="1" stop-color="#288E9D"/>
+<stop offset="1" stop-color="#288E9D"/>
+</linearGradient>
+</defs>
+</svg>
