@@ -1,7 +1,7 @@
 ---
 title: How to Schedule Posts on LinkedIn for Free
 date: '2020-09-17'
-tags: ['React', 'firebase', 'Linkedin','Automation','Scheduling','Open Source']
+tags: ['React', 'firebase', 'Linkedin', 'Automation', 'Scheduling', 'Open Source']
 draft: false
 images: ['https://cdn-images-1.medium.com/max/8000/0*72X9lSZfeR1lEFEp']
 summary: Free Unlimited Posts Scheduler
@@ -16,11 +16,11 @@ x
 
 [**Feed My Flow**](https://feedmyflow.web.app/) allow you to **schedule post** using an easy web application. For now, the website is available only in **English **and in **French **and the application is **mobile friendly**.
 
-![Dashboard of Feed My Flow](https://cdn-images-1.medium.com/max/3840/1*8tZkmKvbFbetG2fmOiQCcA.png)*Dashboard of Feed My Flow*
+![Dashboard of Feed My Flow](https://cdn-images-1.medium.com/max/3840/1*8tZkmKvbFbetG2fmOiQCcA.png)_Dashboard of Feed My Flow_
 
 On the left side, you have a calendar of your posts. On the other side, you have a sum-up of upcoming posts.
 
-![Creation of a future post](https://cdn-images-1.medium.com/max/3840/1*Km2L2pxViMdvXkTUUcI-hA.png)*Creation of a future post*
+![Creation of a future post](https://cdn-images-1.medium.com/max/3840/1*Km2L2pxViMdvXkTUUcI-hA.png)_Creation of a future post_
 
 You can **choose when you want** to post your content. Content is posted **every 15 minutes**. You can choose who can see your post: only your connections or everybody. You can also **add links** to illustrate your content and choose its title.
 
