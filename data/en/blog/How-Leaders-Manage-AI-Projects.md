@@ -45,7 +45,7 @@ To understand how value within companies is created, it is necessary to study ho
 
 First, it is essential to define the need or opportunity that the project will help to address. Most people consider discussion with the business as the most efficient way to achieve this task, however other solutions exist such as those based on opportunities known to be solved by AI such as fraud detection or client churn.
 
-[**100+ AI Use Cases & Applications in 2021: In-Depth Guide**](https://research.aimultiple.com/ai-usecases/)
+[**In Depth Guide to the Top 100+ AI Use Cases & Applications**](https://research.aimultiple.com/ai-usecases/)
 
 ## 2\. Pre-project Reflection
 

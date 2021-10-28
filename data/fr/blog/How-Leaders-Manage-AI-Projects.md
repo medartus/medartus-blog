@@ -2,7 +2,7 @@
 title: "Comment les leaders gèrent-ils les projets d'IA ?"
 date: '2021-11-01'
 tags: ['AI', 'Artificial Intelligence', 'Managment', 'Project Managment']
-draft: true
+draft: false
 summary: "Comment les dirigeants gèrent-ils les projets d'IA ?"
 ---
 
@@ -43,9 +43,9 @@ Pour comprendre comment la valeur est créée au sein des entreprises, il est n�
 
 ## 1\. Identification de l'opportunité
 
-Tout d'abord, il est essentiel de définir le besoin ou l'opportunité que le projet permettra de satisfaire. La plupart des gens considèrent que la discussion avec l'entreprise est le moyen le plus efficace d'accomplir cette tâche, cependant d'autres solutions existent, comme celles basées sur les opportunités connues pour être résolues par l'IA, telles que la détection des fraudes ou le désabonnement des clients.
+Tout d'abord, il est essentiel de définir le besoin ou l'opportunité que le projet permettra de satisfaire. La plupart des gens considèrent que la discussion avec les équipes métier est le moyen le plus efficace d'accomplir cette tâche, cependant d'autres solutions existent, comme celles basées sur les cas d'usage connus pour être résolus par l'IA, telles que la détection des fraudes ou le désabonnement des clients.
 
-[**100+ cas d'utilisation et applications de l'IA en 2021 : guide approfondi**](https://research.aimultiple.com/ai-usecases/)
+[**In Depth Guide to the Top 100+ AI Use Cases & Applications**](https://research.aimultiple.com/ai-usecases/)
 
 ## 2\. Réflexion préalable au projet
 
@@ -53,13 +53,13 @@ Ensuite, il y a toute une phase de réflexion préalable au projet. En effet, ce
 
 ## 3\. Définition du ROI et des KPIs
 
-Ensuite, il est fortement conseillé de définir les indicateurs liés aux projets. En effet, le ROI est un bon indicateur pour tout décideur afin de comprendre les enjeux et les retours possibles. Cependant, il est parfois compliqué de l'estimer, c'est pourquoi des KPIs liés à l'activité sont déterminés pour pallier ce problème. La plupart des dirigeants envisagent de disposer de cet indicateur de réussite avant de lancer le projet.
+Ensuite, il est fortement conseillé de définir les indicateurs liés aux projets. En effet, le ROI est un bon indicateur pour tout décideur afin de comprendre les enjeux et les retours possibles. Cependant, il est parfois compliqué de l'estimer, c'est pourquoi des KPIs liés à l'activité sont déterminés pour pallier ce problème. La plupart des dirigeants envisagent de disposer de cet indicateur de réussite du projet avant de le lancer.
 
 ## 4\. Développement
 
 Après avoir vérifié l'intérêt du projet et défini les indicateurs, le développement peut commencer. La grande majorité des personnes conseillent d'utiliser une méthodologie agile avec des itérations courtes. Certains pensent que faire une solution basée sur l'IA est déjà une bonne étape dès la première itération, d'autres recommandent de créer une solution basée sur des règles simples.
 
-Pour créer un algorithme basé sur des règles, il faut d'abord comprendre en détail les paramètres du problème. Un conseil est de résoudre manuellement les premiers traitements pour bien comprendre les enjeux du projet. Ces tâches permettront de définir plus facilement des règles naïves pour la preuve de concept de l'algorithme. Ensuite, à l'itération suivante, on conseille de créer une première IA de base. Indirectement avec la mise en œuvre de ces premières itérations, des données seront générées et pourront ensuite être utilisées pour perfectionner l'algorithme lors des itérations suivantes.
+Pour créer un algorithme basé sur des règles, il faut d'abord comprendre en détail les paramètres du problème. Un conseil est de résoudre manuellement les premiers traitements pour bien comprendre les enjeux du problème. Ces tâches permettront de définir plus facilement des règles naïves pour la preuve de concept de l'algorithme. Ensuite, à l'itération suivante, il est conseillé de créer une première IA basique. Indirectement avec la mise en œuvre de ces premières itérations, des données seront générées et pourront ensuite être utilisées pour perfectionner l'algorithme lors des itérations suivantes.
 
 ## 5\. Révision itérative
 

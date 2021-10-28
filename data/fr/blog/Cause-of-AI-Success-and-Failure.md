@@ -14,7 +14,7 @@ Le premier facteur essentiel est la compréhension du métier. Cela se concréti
 
 De plus, ces explications vont permettre de démystifier pour beaucoup le fonctionnement et les possibilités liés à cette technologie. En effet, le terme intelligence porte à confusion, car elle n’est pas totalement fondée.
 
-## 2\. Réflexion sur la qualité, l'accès et la valeur des données
+## 2\. Réflexion sur la quantité, l'accessibilité et la qualité des données
 
 les données ont un grand impact sur l’issue du projet. L’échec de ce dernier peut-être dû au manque de données, des données de mauvaise qualité et une valeur ajoutée inexistante. De plus, il est difficile de vraiment définir la quantité nécessaire et la valeur contenue dans ces dernières. Ces idées sont assez abstraites et des papiers de recherche sont totalement dédiés tellement ces sujets sont complexes. Néanmoins, une infrastructure adaptée est nécessaire pour pouvoir gérer et utiliser pleinement ces données.
 
