@@ -11,10 +11,10 @@ export async function getStaticPaths({ locales }) {
     paths: [],
     fallback: false,
   }
-
+  console.log(locales)
   for (const locale of locales) {
     const totalPosts = await getAllFilesFrontMatter('blog', locale)
-    const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE)
+    const totalPages = Math.ceil(totalPosts.length / POSTS_PER_PAGE)
     for (let i = 0; i < totalPages; i++) {
       content.paths.push({
         params: { page: (i + 1).toString() },
@@ -43,7 +43,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'nav', 'siteMetadata', 'blog'])),
+      ...(await serverSideTranslations(locale, ['common', 'nav', 'siteMetadata', 'blog', 'index'])),
       posts,
       initialDisplayPosts,
       pagination,

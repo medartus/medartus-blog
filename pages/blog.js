@@ -9,6 +9,7 @@ export const POSTS_PER_PAGE = 5
 
 export async function getStaticProps({ locale }) {
   const posts = await getAllFilesFrontMatter('blog', locale)
+  console.log(posts)
   const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
   const pagination = {
     currentPage: 1,
@@ -20,7 +21,7 @@ export async function getStaticProps({ locale }) {
       initialDisplayPosts,
       posts,
       pagination,
-      ...(await serverSideTranslations(locale, ['common', 'nav', 'siteMetadata', 'blog'])),
+      ...(await serverSideTranslations(locale, ['common', 'nav', 'siteMetadata', 'blog', 'index'])),
     },
   }
 }

@@ -20,7 +20,7 @@ export async function getStaticPaths({ locales }) {
         params: {
           slug: formatSlug(post).split('/'),
         },
-        locale: locale,
+        locale,
       })
     })
   })
