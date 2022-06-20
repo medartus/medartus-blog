@@ -8,8 +8,9 @@ linkedin: https://www.linkedin.com/in/marcetiennedartus/
 github: https://github.com/medartus
 ---
 
-Je m'appelle Marc-Etienne, je suis Software Engineer chez Amazon à Madrid et je travaille pour l'équipe kindle. Je suis également développeur freelance en Software Engineering et en Data Analysis / Visualization.
+Ingénieur logiciel @Amazon Madrid travaillant sur Kindle. Diplômé en Ingénierie à @ESILV et doublement diplômé en Business à @EMLV.
 
-Je suis diplome d'ingénierie (ESILV) et j'ai aussi master de commerce (EMLV). J'apprends beaucoup par moi-même et j'aime tester de nouveaux langages de programmation pour voir leur potentiel.
+Orienté vers la maintenabilité du code, la performance et le passage à l'échelle des applications. Chaque jour, je conçois des applications à grande échelle à l'impacte mondiale et j'innove au nom de tous les clients de Kindle. Profite au maximum de chaque jour en apprenant de nouveaux sujets tels que l'informatique, le Machine Learning ou le Web 3.
 
-Contactez-moi sur <a href="https://www.linkedin.com/in/marcetiennedartus/">Linkedin</a> ou envoyez-moi un email à <a href="mailto:marcetienne@dartus.fr">marcetienne@dartus.fr</a>.
+Contactez-moi sur <a href="https://www.linkedin.com/in/marcetiennedartus/">Linkedin</a>, envoyez-moi un email à <a href="mailto:marcetienne@dartus.fr">marcetienne@dartus.fr</a> ou réservons <a href="https://calendly.com/medartus/introduction-meeting">un moment pour échnager</a>!
+.
